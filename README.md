@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution on Github](https://github.com/jonathan401/FEM-blogr-landing-page)
+- Live Site URL: [Live demo deployed using vercel](https://fem-blogr-landing-page-262o.vercel.app/)
 
 ## My process
 
@@ -95,6 +95,7 @@ creates a grid and the line `& > *` makes all children in the grid fill the grid
 
 But then, going through the docs, I learned that I should make elements which are nested dependent on the body as opposed to extending elements names within elements. So the code above becomes something like:
 
+```html
 <nav class="nav">
   <a href="#" class="nav__home-link">Site name</a>
   <ul class="nav__link-list">
