@@ -1,0 +1,62 @@
+@use "../abstracts/mixins";
+
+.banner {
+  background-color: var(--clr-red-300);
+  background-image: url("../../../images/bg-pattern-intro-mobile.svg");
+  background-position: 40% 40%;
+  background-size: 400vw;
+  margin-bottom: 4rem;
+  border-bottom-left-radius: var(--border-lg);
+  font-family: var(--ff-primary);
+
+  @media screen and (min-width: 37rem) {
+    & {
+      background-color: transparent;
+      background-image: url("../../../images/bg-pattern-intro-desktop.svg");
+      background-size: 200vw;
+      background-position: 25% 50%;
+      position: relative;
+      margin-bottom: 6rem;
+    }
+
+    &::before {
+      content: "";
+      background-color: none;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background-image: linear-gradient(
+        90deg,
+        var(--clr-red-100),
+        var(--clr-red-300) 50%
+      );
+      border-bottom-left-radius: inherit;
+    }
+  }
+}
+// // hero
+.hero {
+  display: flex;
+  padding: 6rem 1rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  color: var(--white);
+
+  &__header {
+    font-size: clamp(2rem, 4vw, 5rem);
+  }
+
+  &__text {
+    font-size: clamp(0.85rem, 4vw, 1.2rem);
+  }
+
+  &__links {
+    margin-top: 1rem;
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+  }
+}

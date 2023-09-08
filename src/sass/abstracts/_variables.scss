@@ -1,0 +1,38 @@
+$colors: (
+  red: (
+    100: hsl(13, 100%, 72%) /* gradient color 1 */,
+    200: hsl(355, 100%, 74%) /* button hover */,
+    300: hsl(356, 100%, 66%) /* button text */,
+    400: hsl(353, 100%, 62%) /* gradient color 2 */,
+  ),
+  dark: (
+    100: hsl(240, 2%, 79%) /* footer text */,
+    200: hsl(207, 13%, 34%) /* body text */,
+    300: hsl(237, 23%, 32%) /* body text */,
+    400: hsl(240, 10%, 16%) /* footer background */,
+    500: hsl(237, 17%, 21%) /* body text */,
+    600: hsl(208, 49%, 24%),
+  ),
+);
+
+$breakpoints: (
+  small: 36rem,
+  medium: 48rem,
+  large: 67.5rem,
+);
+
+$fonts: (
+  // overpass
+  primary:
+    (
+      300: 300,
+      600: 600,
+    ),
+  // ubuntu
+  secondary:
+    (
+      400: 400,
+      500: 500,
+      700: 700,
+    )
+);

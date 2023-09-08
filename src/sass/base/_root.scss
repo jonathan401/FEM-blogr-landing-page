@@ -1,0 +1,22 @@
+// @use "./colors" as colors;
+@use "../abstracts/variables";
+
+:root {
+  @each $color, $shades in variables.$colors {
+    @each $shade, $value in $shades {
+      --clr-#{""+$color}-#{$shade}: #{$value};
+    }
+  }
+
+  @each $font-type, $font-weights in variables.$fonts {
+    @each $font-weight, $value in $font-weights {
+      --ff-#{$font-type}-w-#{$font-weight}: #{$value};
+    }
+  }
+  --white: hsl(0, 0%, 100%);
+  --border-lg: 5rem;
+
+  // font families
+  --ff-primary: "Overpass", sans-serif;
+  --ff-secondary: "Ubuntu", sans-serif;
+}

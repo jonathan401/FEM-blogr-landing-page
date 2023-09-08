@@ -1,0 +1,48 @@
+.btn {
+  display: inline-block;
+  text-align: center;
+  padding: 0.8em 1.5em;
+  border-radius: 2em;
+  transition: background-color 200ms ease, outline 50ms ease-out;
+  white-space: nowrap;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.05);
+
+  // links that are styled like buttons
+  &:is(a) {
+    text-decoration: none;
+    font-size: inherit;
+  }
+
+  // general focus style
+  &:focus {
+    outline: 2px solid var(--white);
+    outline-offset: 3px;
+  }
+
+  &--primary,
+  &--outlined {
+    font-family: var(--ff-primary);
+    font-weight: var(--ff-primary-w-600);
+  }
+
+  &--primary {
+    background-color: var(--white);
+    color: var(--clr-red-400);
+
+    &:hover {
+      color: var(--white);
+      background-color: var(--clr-red-200);
+    }
+  }
+
+  &--outlined {
+    background-color: transparent;
+    color: var(--white);
+    border: 1px solid var(--white);
+
+    &:hover {
+      background-color: var(--white);
+      color: var(--clr-red-400);
+    }
+  }
+}

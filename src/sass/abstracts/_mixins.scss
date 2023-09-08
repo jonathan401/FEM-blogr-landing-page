@@ -1,0 +1,39 @@
+@use "./variables";
+// screen sizes
+/* 
+  small = 36rem,
+  medium = 48rem,
+  larget = 67.5rem
+*/
+
+@mixin mqMin($value) {
+  @media screen and (min-width: $value) {
+    @content;
+  }
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media screen and (max-width: 37rem) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tablet {
+    @media screen and (max-width: 47rem) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-land {
+    @media screen and (min-width: 47rem) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == desktop {
+    @media screen and (min-width: 67.5rem) {
+      @content;
+    }
+  }
+}
